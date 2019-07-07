@@ -1,0 +1,167 @@
+﻿id,question_id,Answers
+1,1,Yes
+2,1,No
+3,2,Yes
+4,2,No
+5,3,Yes
+6,3,No
+7,4,Yes
+8,4,No
+9,5,Yes
+10,5,No
+11,6,Yes
+12,6,No
+13,7,Yes
+14,7,No
+15,8,Yes
+16,8,No
+17,9,Yes
+18,9,No
+19,10,Yes
+20,10,No
+21,11,Yes
+22,11,No
+23,12,Yes
+24,12,No
+25,13,Daily
+26,13,3 times a week
+27,13,2 times a week
+28,13,Seldom
+29,13,Never
+30,14,None
+31,14,1 to 2
+32,14,3 or more
+33,15,Yes
+34,15,No
+35,16,Yes
+36,16,No
+37,17,Yes
+38,17,No
+39,18,Yes
+40,18,No
+41,19,Yes
+42,19,No
+43,20,Yes
+44,20,No
+45,21,Yes
+46,21,No
+47,22,Yes
+48,22,No
+49,23,Yes
+50,23,No
+51,24,Yes
+52,24,No
+53,25,Yes
+54,25,No
+55,26,Yes
+56,26,No
+57,27,Cancer
+58,27,Diabetes
+59,27,Hypoglycemia
+60,27,Stroke
+61,27,Heart disease
+62,27,Arthritis
+63,27,Osteoporosis
+64,27,Macular degeneration
+65,27,Pulmonary artery disease
+66,27,Hearing loss
+67,27,Cataracts or glaucoma
+68,27,Asthma
+69,27,High cholesterol
+70,27,Alzheimer's disease
+71,28,Heart
+72,28,Statins
+73,28,Lungs
+74,28,Bowel
+75,28,Antidepressants
+76,28,Cancer
+77,28,Antibiotics
+78,28,Thyroid
+79,28,Arthritis
+80,28,Erectile Dysfunction
+81,28,Osteoporosis
+82,28,Diabetes
+83,28,ADHD
+84,28,Blood pressure
+85,28,Blood thinners
+86,29,Multivitamins
+87,29,Energy drinks
+88,29,Calcium
+89,29,Diet pills
+90,29,Ginkgo
+91,29,Heart
+92,29,Vision/eye formula
+93,29,Vitamin C
+94,29,B vitamins (Stress)
+95,29,Vitamin E
+96,29,Cranberry
+97,29,Memory
+98,29,Immune Support
+99,29,Sexual enhancement
+100,29,Phytoestrogens
+101,29,Arthritis
+102,29,Cholesterol
+103,30,Lack of energy
+104,30,Sleep problems
+105,30,Too tired to exercise
+106,30,Mental or physical stress
+107,30,Chronic Fatigue Syndrome
+108,31,Back Pain
+109,31,Arthritis
+110,31,Carpal Tunnel
+111,31,Fibromyalgia
+112,31,Leg cramps at night
+113,31,Sore Joints (not arthritis)
+114,31,Knee Pain (Torn meniscus)
+115,31,"Bone Loss (osteoporosis, osteopenia)"
+116,32,Circulation
+117,32,High Blood Pressure
+118,32,High Cholesterol
+119,32,General cardiovascular
+120,33,Underweight
+121,33,Overweight
+122,34,Hypoglycemia
+123,34,Low Thyroid
+124,34,Diabetes (Type l & ll)
+125,34,Metabolic Syndrome (Diabetes Type lll)
+126,35,Memory Problems
+127,35,ADHD
+128,35,Parkinson's
+129,35,Alzheimer's
+130,36,Gas
+131,36,Celiac
+132,36,Heartburn
+133,36,Irritable Bowel
+134,36,Lactose intolerance
+135,36,Constipation
+136,37,Erectile dysfunction
+137,37,Symptoms of an enlarged prostate
+138,38,PMS
+139,38,Chronic yeast infections
+140,38,Breast cell health
+141,38,Urinary tract infections
+142,38,Peri or post-menopausal symptoms
+143,39,MS
+144,39,Chronic infections
+145,39,Allergies/Asthma
+146,39,Urinary Tract Infection
+147,39,Frequent Colds/Sinusitis
+148,40,Chronic Obstructive Pulmonary Disease
+149,40,Respiratory distress syndrome (ARDS)
+150,41,Cirrhosis of the Liver
+151,42,Cataracts
+152,42,Macular degeneration
+153,42,Reduced Night or Vision
+154,43,Gingivitis
+155,43,Tongue has a white coating
+156,43,Cracks in the corner of mouth
+157,44,Hemorrhoids
+158,44,Varicose veins
+159,44,Migraines/Chronic headaches
+160,45,Dry skin
+161,45,Ridges in nails
+162,45,Brittle nails
+163,45,White spots on nail beds
+164,45,Bruise easily (purpura senilis)
+165,45,Wrinkles
+166,45,Hair loss (due to male pattern baldness or other cause)

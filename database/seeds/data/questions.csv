@@ -1,0 +1,46 @@
+﻿id,heading_id,Question,type
+1,1,Do you skip meals?,radio
+2,2,"Grains (Breads, Cereals, Rice, Pasta): 6-11 servings/day",radio
+3,2,"Meat, poultry, fish, beans, eggs, and nuts 2-3 servings/day?",radio
+4,2,Fruits: 2-4 servings/day?,radio
+5,2,Vegetables: 3-5 servings/day?,radio
+6,2,"Milk, Yogurt, Cheese: 2-3 servings/day?",radio
+7,2,Fish 2-3 servings/week?,radio
+8,2,Do you eat a high-fiber diet?,radio
+9,2,"Do you often eat sweets, cookies, or drink sugary drinks?",radio
+10,2,Are you vegetarian?,radio
+11,2,Drink more than 3 cups of coffee per day?,radio
+12,2,Do you get less than 15 minutes of direct sunlight per day?,radio
+13,3,Do you exercise,option
+14,3,How many alcoholic drinks do you have daily,option
+15,3,Are you on a weight reduction program,radio
+16,3,Do you smoke,radio
+17,3,Do you take antacids often,radio
+18,3,Are you often under physical or mental stress,radio
+19,3,Do you live in a city high in pollution,radio
+20,3,Do you get at least 7-8 hours of sleep per night,radio
+21,3,Do you walk at least 1 mile per day,radio
+22,3,Do you floss at least 5 days per week,radio
+23,3,Do you often feel tired even after a good nights rest,radio
+24,3,Do you plan to have children,radio
+25,3,Do you take birth control pills,radio
+26,3,Have you had surgery or suffered an injury recently,radio
+27,,Please check off the items for which you have a family history:,checkbox
+28,,Which of the medications do you take regularly,checkbox
+29,,What type of nutritional supplements are you taking,checkbox
+30,,Which of the following health issues would you like to improve? (Check all that apply),checkbox
+31,,Muscle/Bones/Joints,checkbox
+32,,Heart Health/Triglycerides,checkbox
+33,,Weight,radio
+34,,Glucose and Thyroid,checkbox
+35,,Brain Health/Support,checkbox
+36,,Digestion/Regularity,checkbox
+37,,Male Concerns,checkbox
+38,,Female Concerns,checkbox
+39,,Immune Support,checkbox
+40,,Lungs,checkbox
+41,,Liver,checkbox
+42,,Healthy Vision,checkbox
+43,,Dental health,checkbox
+44,,Vascular,checkbox
+45,,"Hair, Skin, Nails",checkbox
