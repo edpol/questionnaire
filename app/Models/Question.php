@@ -10,17 +10,27 @@ class Question extends Model
         'heading_id', 'question', 'type'
     ];
 
-    public function answersList($question_id)
+    public function getAnswers($id)
     {
-        return Answer::where('question_id',$question_id)->get();
+        return Answer::where('question_id',$id)->get();
+    }
+
+    public function getQuestion($order)
+    {
+        return Question::where("order",$order)->first();
+    }
+
+    public function getHeading($id)
+    {
+        return Heading::find($id);
     }
 
     public function answers() {
         return $this->hasMany(Answer::class);
     }
 
-    public function headings() {
-        return $this->belongsTo(Heading::class);
+    public function heading() {
+        return $this->belongsTo(Heading::class, 'heading_id');
     }
 
 }

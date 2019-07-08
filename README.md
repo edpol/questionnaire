@@ -1,36 +1,20 @@
-# PBO-Wrapper
+# Questionnaire
 
-####Required
-Model Maker thing  
-Multiple DB credentials in ENV so copy it.  
-Set full path for models  
-and other flags  
+###End Points
 
-
-###Passport
-To generate a Client
-
-```php artisan passport:client --personal```
-
-To Generate a Key for that client
-```php
-$user = App\User::find(1);
-
-// Creating a token without scopes...
-$token = $user->createToken('Token Name')->accessToken;
-
-// Creating a token with scopes...
-$token = $user->createToken('My Token', ['place-orders'])->accessToken;
-```
-
+url/api/question/{{order}}
 
 
 
 ###Install
-git clone  
-composer install  
+````  
+$ git clone  
+$ composer install  
 ed .env, add DB information  
-create database questionnaire  
-use questionnaire  
-GRANT ALL PRIVILEGES ON questionnaire.* TO 'curious'@'localhost' IDENTIFIED BY 'george'  
-php artisan migrate --seed  
+MySQL> create database questionnaire  
+MySQL> use questionnaire  
+MySQL> GRANT ALL PRIVILEGES ON questionnaire.* 
+       TO 'curious'@'localhost' 
+       IDENTIFIED BY 'george'  
+$ php artisan make:auth  
+$ php artisan migrate --seed

@@ -15,7 +15,7 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('order')->index(); // we are allowing duplicates for more flexibility
+            $table->bigInteger('order')->unsigned()->index(); // we are allowing duplicates for more flexibility
             $table->unsignedBigInteger('heading_id')->nullable();
             $table->foreign('heading_id')->references('id')->on('headings')->onDelete('cascade');
             $table->text('question');
