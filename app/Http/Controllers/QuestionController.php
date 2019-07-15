@@ -41,7 +41,6 @@ class QuestionController extends Controller
     {
         $questions = new Question();
         $question = $questions->getQuestion($order);
-//        $question = Question::where("order",$order)->first();
         if(is_null($question)){
             return response()->json([
                 'error' => ["Question {$order} does not exist."]
@@ -53,15 +52,8 @@ class QuestionController extends Controller
         $row["heading_id"] = $question->heading_id;
         $row["question"] = $question->question;
         $row["type"] = $question->type;
-//        $row["heading"] = $question->getHeading($question->id);
-        $temp = $row['heading'] = $question->heading();
-        $row["answers"] = $question->getAnswers($question->id);
-var_dump($temp);
-dd();
-//$headings = Heading::find($question->heading_id);
-//var_dump($headings->heading);
-//dd();
-//      $row['answers'] = $question->answers();
+        $row['heading'] = $question->heading;
+        $row['answers'] = $question->answers;
         $results[] = $row;
 
         return response()->json([
