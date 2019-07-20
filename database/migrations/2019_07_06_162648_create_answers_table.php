@@ -19,7 +19,7 @@ class CreateAnswersTable extends Migration
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->unsignedBigInteger('item_id')->nullable();
             $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
-            $table->enum('type', ['add','remove']);
+            $table->boolean('add')->default(true);
             $table->text('answer');
             $table->timestamps();
         });
