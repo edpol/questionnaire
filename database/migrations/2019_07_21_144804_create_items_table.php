@@ -15,11 +15,11 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('name');
-            $table->text('sku');
-            $table->text('link');
-            $table->decimal('price',10,4);
-            $table->text('description');
+            $table->unsignedBigInteger('answer_id');
+            $table->foreign('answer_id')->references('id')->on('answers')->onDelete('cascade');
+            $table->unsignedBigInteger('stock_id');
+            $table->foreign('stock_id')->references('id')->on('stock')->onDelete('cascade');
+            $table->boolean('add')->default(true);
             $table->timestamps();
         });
     }

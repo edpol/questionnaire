@@ -2,9 +2,8 @@
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class ItemsTableSeeder extends Seeder
+class StockTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,23 +12,20 @@ class ItemsTableSeeder extends Seeder
      */
     public function run()
     {
-        $name = "items";
+        $name = "stock";
         $filename = $name . ".csv";
         if (($handle = fopen("database/seeds/data/".$filename, "r")) !== FALSE) {
             $row = 1;
             $records = array();
             $skip_header_row = fgetcsv($handle, 1000, ",");
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-if ($data[2]<1 || $data[2]>25){
-    echo "Bad index ";
-    print_r($data);
-    dd();
-}
                 $records[] = [
                     'id'          => $data[0],
-                    'answer_id'   => $data[1],
-                    'stock_id'    => $data[2],
-                    'add'         => ($data[3]=='TRUE') ? true : false,
+                    'name'        => $data[1],
+                    'sku'         => $data[2],
+                    'link'        => $data[3],
+                    'price'       => $data[4],
+                    'description' => $data[5],
                     'created_at'  => Carbon::now()->format('Y-m-d H:i:s'),
                     'updated_at'  => Carbon::now()->format('Y-m-d H:i:s')
                 ];

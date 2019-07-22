@@ -2,9 +2,7 @@
 
 ###End Points
 
-url/api/question/{{order}}
-
-
+{{url}}/api/question/{{order}}
 
 ###Install
 ``` 

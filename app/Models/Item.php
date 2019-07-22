@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $fillable = [
-        'name', 'sku', 'link', 'price', 'description'
+        'answer_id', 'stock_id', 'add'
     ];
 
     public function answer() {
-        return $this->hasMany(Answer::class);
+        return $this->belongsTo(Answer::class);
+    }
+
+    public function stock() {
+        return $this->belongsTo(Stock::class);
     }
 }

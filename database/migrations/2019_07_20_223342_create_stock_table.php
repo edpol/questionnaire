@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnswersTable extends Migration
+class CreateStockTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateAnswersTable extends Migration
      */
     public function up()
     {
-        Schema::create('answers', function (Blueprint $table) {
+        Schema::create('stock', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('answer');
-            $table->unsignedBigInteger('question_id')->nullable();
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+            $table->text('name');
+            $table->text('sku');
+            $table->text('link');
+            $table->decimal('price',10,4);
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateAnswersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answers');
+        Schema::dropIfExists('stock');
     }
 }
