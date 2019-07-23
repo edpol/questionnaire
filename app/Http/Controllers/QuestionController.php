@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Heading;
+use App\Models\Answer;
 use App\Models\Question;
 use Illuminate\Http\Request;
 
@@ -56,8 +57,21 @@ class QuestionController extends Controller
         $row['answers'] = $question->answers;
         $results[] = $row;
 
+        $answers = [];
+        foreach($question->answers as $a) {
+            $answers[] = $a->answer;
+//            get the items that go with this answer
+        }
+//        $answers = json_encode($answers);
+
         return response()->json([
-            'results' => $results
+            'id' => $question->id,
+            'order' => $question->order,
+            'heading_id' => $question->heading_id,
+            'question' => $question->question,
+            'type' => $question->type,
+            'heading' => $question->heading->heading,
+            'answers' => $answers
         ]);
 
     }

@@ -9,6 +9,7 @@ class Stock extends Model
     protected $fillable = [
         'name', 'sku', 'link', 'price', 'description'
     ];
+    protected $table = 'stock';
 
     public function item() {
         return $this->hasMany(Item::class);

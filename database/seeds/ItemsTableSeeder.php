@@ -3,6 +3,7 @@
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Stock;
 
 class ItemsTableSeeder extends Seeder
 {
@@ -20,11 +21,13 @@ class ItemsTableSeeder extends Seeder
             $records = array();
             $skip_header_row = fgetcsv($handle, 1000, ",");
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-if ($data[2]<1 || $data[2]>25){
-    echo "Bad index ";
-    print_r($data);
-    dd();
-}
+
+                $max = Stock::latest('id')->first();
+                if ($data[2]<1 || $data[2]>$max->id){
+                    echo "Index does not exist in STOCK table ";
+                    print_r($data);
+                    dd();
+                }
                 $records[] = [
                     'id'          => $data[0],
                     'answer_id'   => $data[1],
