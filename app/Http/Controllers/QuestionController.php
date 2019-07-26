@@ -59,19 +59,26 @@ class QuestionController extends Controller
 
         $answers = [];
         foreach($question->answers as $a) {
-            $answers[] = $a->answer;
-//            get the items that go with this answer
+            $items = $a->item;
+            $items_for_answer = [];
+            foreach($items as $i ){
+                $s = $i->stock;
+                $items_for_answer[] = ['name' => $s->name, 'sku' => $i->sku, 'price' => $i->price, 'add' => $i->add, 'link' => $s->link, 'description' => $s->description];
+            }
+            $answers[] = [
+                "answer" => $a->answer,
+                "items"  => $items_for_answer
+            ];
         }
-//        $answers = json_encode($answers);
 
         return response()->json([
             'id' => $question->id,
             'order' => $question->order,
             'heading_id' => $question->heading_id,
+            'heading' => $question->heading->heading,
             'question' => $question->question,
             'type' => $question->type,
-            'heading' => $question->heading->heading,
-            'answers' => $answers
+            'answers' => $answers,
         ]);
 
     }
