@@ -19,18 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::resource('heading', 'HeadingController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group([
+    'prefix' => 'question'
+], function () {
+    Route::get('/create', 'QuestionController@create');
+    Route::post('/', 'QuestionController@store');
+    Route::get('/{order}/edit', 'QuestionController@edit');
+    Route::put('/{question}', 'QuestionController@update');
+    Route::delete('/{question}', 'QuestionController@destroy');
+});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+/* Route::resource('question', 'QuestionController');
+Route::get('/question',                 'QuestionController@index');
+Route::get('/question/{question}',      'QuestionController@show');
+*/

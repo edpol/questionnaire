@@ -10,6 +10,10 @@ class Heading extends Model
         'heading'
     ];
 
+    public function getAll() {
+        return Heading::all();
+    }
+
     public function question() {
         return $this->hasMany(Question::class);
     }

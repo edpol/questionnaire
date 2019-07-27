@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="712c5c19-5136-4e44-a800-45e95c6b59f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/heading/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/question/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HeadingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HeadingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Heading.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Heading.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,11 +117,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="width" value="3423" />
-    <option name="height" value="2112" />
-  </component>
   <component name="ProjectId" id="1OWrSfjQmMJFuXuJKQ5m5S431RK" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -173,7 +175,10 @@
       <workItem from="1563661869400" duration="5415000" />
       <workItem from="1563679765119" duration="1029000" />
       <workItem from="1563713925383" duration="10263000" />
-      <workItem from="1564104202935" duration="1738000" />
+      <workItem from="1564104202935" duration="2342000" />
+      <workItem from="1564179426507" duration="11013000" />
+      <workItem from="1564238837148" duration="4758000" />
+      <workItem from="1564264245171" duration="311000" />
     </task>
     <servers />
   </component>
@@ -185,7 +190,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

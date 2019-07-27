@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Heading;
+use App\Models\Heading;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class HeadingController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function index()
     {
@@ -20,18 +21,21 @@ class HeadingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        $heading = new Heading();
+        $headings = $heading->getAll();
+        // get a list of headings, with an input on top
+        return view('heading.create', ["headings" => $headings]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return void
      */
     public function store(Request $request)
     {
@@ -41,8 +45,8 @@ class HeadingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Heading  $heading
-     * @return \Illuminate\Http\Response
+     * @param Heading $heading
+     * @return void
      */
     public function show(Heading $heading)
     {
@@ -52,8 +56,8 @@ class HeadingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Heading  $heading
-     * @return \Illuminate\Http\Response
+     * @param  Heading  $heading
+     * @return void
      */
     public function edit(Heading $heading)
     {
@@ -63,9 +67,9 @@ class HeadingController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Heading  $heading
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param  Heading  $heading
+     * @return void
      */
     public function update(Request $request, Heading $heading)
     {
@@ -75,8 +79,8 @@ class HeadingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Heading  $heading
-     * @return \Illuminate\Http\Response
+     * @param  Heading  $heading
+     * @return void
      */
     public function destroy(Heading $heading)
     {

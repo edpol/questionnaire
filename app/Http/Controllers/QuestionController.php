@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Heading;
-use App\Models\Answer;
 use App\Models\Question;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -36,7 +35,7 @@ class QuestionController extends Controller
      * Display the specified resource.
      *
      * @param  $order
-     * @return \Illuminate\Http\JsonResponse $results
+     * @return JsonResponse $results
      */
     public function show($order)
     {
@@ -90,7 +89,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('question.create');
     }
 
     /**
