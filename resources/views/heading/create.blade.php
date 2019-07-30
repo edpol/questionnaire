@@ -1,35 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+<div id="app">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-9">
-                <form action="/heading" method="post">
-                    @csrf
-                    <div class="row">
-                        <div class="col-md-2 mt-2">
-                            <label for="heading">New Heading:</label>
-                        </div>
-                        <div class="col-md-10 mt-2">
-                            <input class="col-12" id="heading" name="heading" type="text">
-                        </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Dashboard</div>
+                    <div class="card-body">
+example-component <br />
+                        <example-component></example-component>
                     </div>
-                </form>
-                <div class="w-100"></div>
+                    <div class="card-body">
+heading-list<br />
+                        <heading-list></heading-list>
+                    </div>
 
-                    @foreach($headings as $heading)
-                        <div class="row">
-                            <div class="col-md-1 mt-2">
-                                {{ $heading->id }}
-                            </div>
-                            <div class="col-md-11 mt-2">
-                                {{ $heading->heading }}
-                            </div>
-                        </div>
-                    @endforeach
                 </div>
-
             </div>
         </div>
     </div>
+</div>
 @endsection

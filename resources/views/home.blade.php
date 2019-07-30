@@ -17,7 +17,9 @@
 
                     You are logged in!
                 </div>
-
+                <div class="card-body">
+                    <example-component></example-component>
+                </div>
                 <div class="card-body">
                     <a href="/question/create" class="btn btn-primary">
                         Add a Questions
