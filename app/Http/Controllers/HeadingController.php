@@ -15,11 +15,7 @@ class HeadingController extends Controller
      */
     public function index()
     {
-        $heading = new Heading();
-        $headings = $heading->getAll();
-        return response()->json([
-            'headings' => $headings
-        ]);
+        return Heading::latest()->get();
     }
 
     /**

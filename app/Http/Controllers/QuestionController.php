@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Question;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -85,7 +86,7 @@ class QuestionController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -95,8 +96,8 @@ class QuestionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return void
      */
     public function store(Request $request)
     {
@@ -106,8 +107,8 @@ class QuestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Question  $question
-     * @return \Illuminate\Http\Response
+     * @param Question $question
+     * @return void
      */
     public function edit(Question $question)
     {
@@ -117,9 +118,9 @@ class QuestionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Question  $question
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Question $question
+     * @return void
      */
     public function update(Request $request, Question $question)
     {
@@ -129,8 +130,8 @@ class QuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Question  $question
-     * @return \Illuminate\Http\Response
+     * @param Question $question
+     * @return void
      */
     public function destroy(Question $question)
     {

@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('heading', 'HeadingController');
+Route::resource('heading', 'HeadingController')->except(['index']);
 
 Route::group([
     'prefix' => 'question'

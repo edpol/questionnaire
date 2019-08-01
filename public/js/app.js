@@ -1887,18 +1887,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    'task': '<li><slot></slot></li>'
+    task: {
+      id: '',
+      name: '',
+      color: ''
+    }
   },
   mounted: function mounted() {
     console.log('Component mounted 2.');
   },
   data: function data() {
     return {
-      'joe': 'cool',
+      dataFromServer: undefined,
+      headings: undefined,
+      errors: '',
       tasks: [{
         description: 'Go to work',
         complete: false
@@ -1914,12 +1918,20 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
+  created: function created() {
+    this.fetchHeadings();
+  },
   methods: {
-    fetchHeaderList: function fetchHeaderList() {
+    fetchHeadings: function fetchHeadings() {
       var _this = this;
 
-      axios.get('api/tasks').then(function (res) {
-        _this.list = res.data;
+      window.axios.get('/api/headings').then(function (_ref) {
+        var data = _ref.data;
+        _this.headings = data;
+        console.log(_this.headings);
+      })["catch"](function (error) {
+        //                        this.errors = error;
+        console.log(error);
       });
     }
   }
@@ -37272,20 +37284,11 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _vm._v(
-              "\n                    I'm an example component 2 " +
-                _vm._s(_vm.joe) +
-                ".\n                    "
-            ),
-            _c("hr"),
-            _vm._v(" "),
-            _c("h2", [_vm._v("All Tasks")]),
-            _vm._v(" "),
             _c(
               "ul",
-              _vm._l(_vm.tasks, function(task) {
+              _vm._l(_vm.headings, function(heading) {
                 return _c("li", {
-                  domProps: { textContent: _vm._s(task.description) }
+                  domProps: { textContent: _vm._s(heading.heading) }
                 })
               }),
               0
@@ -49692,8 +49695,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\inetpub\wwwroot\questionnaire\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\inetpub\wwwroot\questionnaire\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\inetpub\wwwroot\questionnaire\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\inetpub\wwwroot\questionnaire\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
