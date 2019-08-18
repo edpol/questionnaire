@@ -1,15 +1,11 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component in template tag</div>
-                    <div class="card-body">
-<!--                        <ul><li v-for="task in tasks" v-text="task.description"></li></ul> -->
-                        <ul><li v-for="heading in headings" v-text="heading.heading"></li></ul>
-                    </div>
-                </div>
-            </div>
+            <label for="wtf">New Heading: </label>&nbsp;
+            <input id="wtf" type="text" v-model="newHeading">&nbsp;
+            <button v-on:click="addHeading" class="btn btn-primary">Add Heading</button>
+            <br />
+            <ol><li v-for="heading in headings" v-text="heading.heading"></li></ol>
         </div>
     </div>
 </template>
@@ -29,15 +25,9 @@
         },
         data() {
             return {
-                dataFromServer: undefined,
                 headings:  undefined,
+                newHeading: '',
                 errors: '',
-                tasks: [
-                    {description: 'Go to work',      complete: false},
-                    {description: 'Go to the email', complete: false},
-                    {description: 'Go to the farm',  complete: true},
-                    {description: 'Go to the store', complete: true}
-                ]
             };
         },
         created() {
@@ -55,6 +45,15 @@
                         console.log(error);
                     })
             },
+            addHeading() {
+                let newRow = {id: 0, heading: this.newHeading};
+                this.headings.push(newRow);
+// axios post data
+                this.newHeading = '';
+            },
+            deleteHeading() {
+
+            }
         }
     }
 </script>

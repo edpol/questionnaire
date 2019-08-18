@@ -21,9 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('heading', 'HeadingController')->except(['index']);
 
-Route::group([
-    'prefix' => 'question'
-], function () {
+Route::group(['prefix' => 'question', 'middleware' => 'auth'], function() {
     Route::get('/create', 'QuestionController@create');
     Route::post('/', 'QuestionController@store');
     Route::get('/{order}/edit', 'QuestionController@edit');

@@ -22,7 +22,7 @@
                 </div>
                 <div class="card-body">
                     <a href="/question/create" class="btn btn-primary">
-                        Add a Questions
+                        Add a Question
                     </a>
                     <a href="/heading/create" class="btn btn-primary">
                         Add a Heading
