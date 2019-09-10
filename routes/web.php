@@ -19,7 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('heading', 'HeadingController')->except(['index']);
+//Route::resource('heading', 'HeadingController')->except(['index']);
+Route::group(['prefix' => 'heading', 'middleware' => 'auth'], function() {
+    Route::get('/create', 'HeadingController@create');
+    Route::post('/create', 'HeadingController@create');
+});
 
 Route::group(['prefix' => 'question', 'middleware' => 'auth'], function() {
     Route::get('/create', 'QuestionController@create');

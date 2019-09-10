@@ -35,11 +35,12 @@ class HeadingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return void
+     * @return Request
      */
     public function store(Request $request)
     {
-        //
+        $temp = $request;
+        return $temp;
     }
 
     /**

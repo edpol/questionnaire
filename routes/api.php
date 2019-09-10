@@ -17,7 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/questions',        'QuestionController@index');
-Route::get('/question/{order}', 'QuestionController@show');
+    Route::get('/questions', 'QuestionController@index');
+    Route::get('/question/{order}', 'QuestionController@show');
 
-Route::get('/headings',         'HeadingController@index');
+    Route::get('/headings', 'HeadingController@index');
+    Route::post('/headings', 'HeadingController@store');

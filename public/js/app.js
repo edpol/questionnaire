@@ -1883,6 +1883,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     task: {
@@ -1898,7 +1899,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       headings: undefined,
       newHeading: '',
-      errors: ''
+      errors: '',
+      http_host: window.location - window.location.pathname
     };
   },
   created: function created() {
@@ -1913,20 +1915,38 @@ __webpack_require__.r(__webpack_exports__);
         _this.headings = data;
         console.log(_this.headings);
       })["catch"](function (error) {
-        //                        this.errors = error;
+        this.errors = error;
         console.log(error);
       });
     },
     addHeading: function addHeading() {
+      var _this2 = this;
+
+      var url = window.location;
+      console.log(url);
+      console.log(this.http_host);
+      var host = window.location.host.split(':')[0];
+      console.log(host);
       var newRow = {
         id: 0,
         heading: this.newHeading
       };
-      this.headings.push(newRow); // axios post data
-
+      this.headings.push(newRow);
       this.newHeading = '';
+      window.axios.post(url, newRow).then(function (_ref2) {
+        var data = _ref2.data;
+        _this2.response = data;
+        console.log(url);
+        console.log(data);
+      })["catch"](function (_ref3) {
+        var error = _ref3.error;
+        // handle error
+        console.log('Error - ' + url);
+        console.log(error);
+      });
     },
-    deleteHeading: function deleteHeading() {}
+    deleteHeading: function deleteHeading() {// maybe just hide it instead?
+    }
   }
 });
 
@@ -37270,36 +37290,36 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("label", { attrs: { for: "wtf" } }, [_vm._v("New Heading: ")]),
-      _vm._v(" \n        "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.newHeading,
-            expression: "newHeading"
-          }
-        ],
-        attrs: { id: "wtf", type: "text" },
-        domProps: { value: _vm.newHeading },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+      _c("p", [
+        _c("label", { attrs: { for: "wtf" } }, [_vm._v("New Heading: ")]),
+        _vm._v(" \n            "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newHeading,
+              expression: "newHeading"
             }
-            _vm.newHeading = $event.target.value
+          ],
+          attrs: { id: "wtf", type: "text" },
+          domProps: { value: _vm.newHeading },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newHeading = $event.target.value
+            }
           }
-        }
-      }),
-      _vm._v(" \n        "),
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", on: { click: _vm.addHeading } },
-        [_vm._v("Add Heading")]
-      ),
-      _vm._v(" "),
-      _c("br"),
+        }),
+        _vm._v(" \n            "),
+        _c(
+          "button",
+          { staticClass: "btn btn-primary", on: { click: _vm.addHeading } },
+          [_vm._v("Add Heading")]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "ol",
