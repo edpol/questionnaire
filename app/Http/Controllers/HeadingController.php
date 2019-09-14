@@ -25,7 +25,7 @@ class HeadingController extends Controller
      */
     public function create()
     {
-        $heading = new Heading();
+        $heading = new Heading;
         $headings = $heading->getAll();
         // get a list of headings, with an input on top
         return view('heading.create', ["headings" => $headings]);
@@ -35,12 +35,14 @@ class HeadingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Request
+     * @return void
      */
     public function store(Request $request)
     {
-        $temp = $request;
-        return $temp;
+        $heading = new Heading;
+        $heading->id = $request->input("heading");
+        $heading->save();
+        return;
     }
 
     /**

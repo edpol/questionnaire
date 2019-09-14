@@ -53,3 +53,11 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/**
+ * loading toasr
+ * @type {*}
+ */
+try{
+    window.toastr = require('toastr');
+} catch (e) {}

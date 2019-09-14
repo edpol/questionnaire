@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('heading', 'HeadingController')->except(['index']);
 Route::group(['prefix' => 'heading', 'middleware' => 'auth'], function() {
     Route::get('/create', 'HeadingController@create');
-    Route::post('/create', 'HeadingController@create');
+    Route::post('/create', 'HeadingController@store');
 });
 
 Route::group(['prefix' => 'question', 'middleware' => 'auth'], function() {
@@ -37,3 +37,9 @@ Route::group(['prefix' => 'question', 'middleware' => 'auth'], function() {
 Route::get('/question',                 'QuestionController@index');
 Route::get('/question/{question}',      'QuestionController@show');
 */
+
+Route::get("/test", function(){
+    return view('testview');
+});
+Route::post('/submitdata', 'TestController@testfunction');
+

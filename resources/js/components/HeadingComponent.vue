@@ -29,7 +29,7 @@
                 headings:  undefined,
                 newHeading: '',
                 errors: '',
-                http_host: window.location - window.location.pathname,
+                http_host: window.location.origin,
             };
         },
         created() {
@@ -48,23 +48,23 @@
                     })
             },
             addHeading() {
-                let url = window.location;
-                console.log(url);
-                console.log(this.http_host);
-                let host = window.location.host.split(':')[0];
-                console.log(host);
+                //vue display
                 let newRow = {id: 0, heading: this.newHeading};
                 this.headings.push(newRow);
                 this.newHeading = '';
-
+toastr.success('toastr now works with Laravel 5.4+')
+                // update database
+                let url = this.http_host + "/heading/create";
                 window.axios.post(url, newRow)
                     .then(({data}) => {
                         this.response = data;
-                        console.log(url);
+console.log('Data: ');
                         console.log(data);
                     })
                     .catch(({ error }) => {
                         // handle error
+//                        this.$root.$refs.toastr.e("Error - " + error);
+                        this.$toastr.error("Error - " + error);
                         console.log('Error - ' + url);
                         console.log(error);
                     });

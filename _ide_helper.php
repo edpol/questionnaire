@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.16 on 2019-08-18 03:26:42.
+ * Generated for Laravel 5.8.16 on 2019-09-14 02:58:44.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14530,6 +14530,110 @@ namespace Illuminate\Support {
  
 }
 
+namespace Kamaln7\Toastr\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Toastr {
+        
+        /**
+         * Render the notifications' script tag
+         *
+         * @return string 
+         * @internal param bool $flashed Whether to get the
+         * @static 
+         */ 
+        public static function render()
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->render();
+        }
+        
+        /**
+         * Add a notification
+         *
+         * @param string $type Could be error, info, success, or warning.
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @return bool Returns whether the notification was successfully added or
+         * not.
+         * @static 
+         */ 
+        public static function add($type, $message, $title = null, $options = array())
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->add($type, $message, $title, $options);
+        }
+        
+        /**
+         * Shortcut for adding an info notification
+         *
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @static 
+         */ 
+        public static function info($message, $title = null, $options = array())
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->info($message, $title, $options);
+        }
+        
+        /**
+         * Shortcut for adding an error notification
+         *
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @static 
+         */ 
+        public static function error($message, $title = null, $options = array())
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->error($message, $title, $options);
+        }
+        
+        /**
+         * Shortcut for adding a warning notification
+         *
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @static 
+         */ 
+        public static function warning($message, $title = null, $options = array())
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->warning($message, $title, $options);
+        }
+        
+        /**
+         * Shortcut for adding a success notification
+         *
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @static 
+         */ 
+        public static function success($message, $title = null, $options = array())
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->success($message, $title, $options);
+        }
+        
+        /**
+         * Clear all notifications
+         *
+         * @static 
+         */ 
+        public static function clear()
+        {
+                        /** @var \Kamaln7\Toastr\Toastr $instance */
+                        return $instance->clear();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17182,6 +17286,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Toastr extends \Kamaln7\Toastr\Facades\Toastr {}
  
 }
 
