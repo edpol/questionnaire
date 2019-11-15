@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Toastr</title>
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 </head>
 <body>
@@ -9,7 +9,15 @@
     <h1>Laravel Toasr Notifications</h1>
     <form action="submitdata" method="post">
         <input type="hidden" name="_token" value ="{{ csrf_token() }}">
-        <span>Name:</span><input id="name_id" name="testname"><br /><br />
+        <label for="name_id">Name:</label>
+        <select id="name_id" name="testname">
+            <option value="success">Success</option>
+            <option value="info">Info</option>
+            <option value="warning">Warning</option>
+            <option value="error">Error</option>
+            <option value="other">Other</option>
+        </select>
+        <br /><br />
         <button type="submit">Submit</button>
     </form>
 </center>

@@ -41,5 +41,5 @@ Route::get('/question/{question}',      'QuestionController@show');
 Route::get("/test", function(){
     return view('testview');
 });
-Route::post('/submitdata', 'TestController@testfunction');
+Route::post('/submitdata', 'TestController@TestFunction');
 
