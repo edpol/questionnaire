@@ -9,11 +9,10 @@
 $ git clone  
 $ composer install  
 ed .env, add DB information  
-MySQL> create database questionnaire  
-MySQL> use questionnaire  
-MySQL> GRANT ALL PRIVILEGES ON questionnaire.* 
-       TO 'curious'@'localhost' 
-       IDENTIFIED BY 'george'  
+mysql> CREATE DATABASE questionnaire;  
+mysql> USE questionnaire;  
+mysql> CREATE USER 'curious'@'%' IDENTIFIED BY 'george'; 
+mysql> GRANT ALL PRIVILEGES ON questionnaire.* TO 'curious'@'%' WITH GRANT OPTION;
 $ php artisan key:generate  
 $ php artisan make:auth  
 $ php artisan migrate --seed

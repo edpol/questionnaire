@@ -42,4 +42,3 @@ Route::get("/test", function(){
     return view('testview');
 });
 Route::post('/submitdata', 'TestController@TestFunction');
-
