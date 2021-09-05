@@ -42,3 +42,7 @@ Route::get("/test", function(){
     return view('testview');
 });
 Route::post('/submitdata', 'TestController@TestFunction');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

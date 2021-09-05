@@ -531,7 +531,7 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "league/flysystem": "^1.0.8",
+                "league/flysystem": "^1.1.4",
                 "monolog/monolog": "^1.12",
                 "nesbot/carbon": "^1.26.3 || ^2.0",
                 "opis/closure": "^3.1",
@@ -544,7 +544,7 @@
                 "symfony/debug": "^4.2",
                 "symfony/finder": "^4.2",
                 "symfony/http-foundation": "^4.2",
-                "symfony/http-kernel": "^4.2",
+                "symfony/http-kernel": "^4.4.13",
                 "symfony/process": "^4.2",
                 "symfony/routing": "^4.2",
                 "symfony/var-dumper": "^4.2",
@@ -3513,7 +3513,7 @@
             },
             "require": {
                 "barryvdh/reflection-docblock": "^2.0.6",
-                "composer/composer": "^1.6",
+                "composer/composer": "^1.10.22",
                 "doctrine/dbal": "~2.3",
                 "illuminate/console": "^5.5|^6|^7",
                 "illuminate/filesystem": "^5.5|^6|^7",
@@ -4733,7 +4733,7 @@
                 "symfony/console": "~2.8|~3.3|~4.0"
             },
             "require-dev": {
-                "laravel/framework": "5.8.*",
+                "laravel/framework": "6.20.26",
                 "nunomaduro/larastan": "^0.3.0",
                 "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "~8.0"
